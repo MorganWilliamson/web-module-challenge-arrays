@@ -130,12 +130,13 @@ Your function should accept:
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+const original31 = []
 
-function copy(/*code here*/){
+function copy(array, newArray){
+    return newArray = [... array]
+};
 
-    /*code here*/
-
-}
+console.log(copy(originalFlavors, original31));
 
 // spread operator [...spread]
 // think about copying an array
