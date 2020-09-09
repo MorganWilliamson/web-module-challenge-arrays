@@ -61,12 +61,12 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
-function addFlavor(array){
-    originalFlavors.unshift("Rainbow Sherbert");
+function addFlavor(flavor, array){
+    array.unshift(flavor);
     return array;
 }
 
-console.log(addFlavor(originalFlavors));
+console.log(addFlavor("Rainbow Sherbert", originalFlavors));
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -80,7 +80,7 @@ Your function should remove a flavor from the end of the array and console.log t
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
 function removeLastFlavor(array){
-    originalFlavors.pop();
+    array.pop();
     return array;
 };
 
@@ -96,8 +96,7 @@ Your function should accept:
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
 function getFlavorByIndex(array, index){
-    array[index];
-    return originalFlavors[index];
+    return array[index];
 };
 
 console.log(getFlavorByIndex(originalFlavors, 2));
@@ -115,12 +114,14 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(array, flavor){
+    // goes through the array to find an item that matches the flavor
+    // take the index of that item that matches
+    array.indexOf(flavor)
+    return array.splice()
 }
 
+console.log(removeFlavorByName())
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -135,6 +136,9 @@ function copy(/*code here*/){
     /*code here*/
 
 }
+
+// spread operator [...spread]
+// think about copying an array
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
