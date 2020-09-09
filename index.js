@@ -117,11 +117,11 @@ Hint: You can use .splice() for this
 function removeFlavorByName(array, flavor){
     // goes through the array to find an item that matches the flavor
     // take the index of that item that matches
-    array.indexOf(flavor)
-    return array.splice()
+    array.indexOf(flavor) // goes through array to find index of input flavor
+    return array.splice(flavor, 30) // returns array with flavor removed
 }
 
-console.log(removeFlavorByName())
+console.log(removeFlavorByName(originalFlavors, "Vanilla")); // passes array and flavor, removes entered flavor
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
