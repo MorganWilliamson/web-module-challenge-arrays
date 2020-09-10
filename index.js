@@ -130,16 +130,28 @@ Your function should accept:
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
-const original31 = []
+
+
+// function copy(){
+
+// }
+
+
+let newArray = [];
+original31 = [];
 
 function copy(array, newArray){
-    return newArray = [... array]
-};
+    for (i = 0; i < array.length; i++){
+        newArray[i] = array[i];
+    }
+    return newArray;
+}
 
-console.log(copy(originalFlavors, original31));
+ console.log(copy(originalFlavors, original31));
 
 // spread operator [...spread]
 // think about copying an array
+// only returns vanilla
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
